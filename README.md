@@ -81,11 +81,12 @@ Spies allow you to stub any function track calls to it and all arguments.
 ######Spy modifiers
 `andCallThrough()` when chained onto a spy, we can track calls and arguments to a function but, in addition,
 delegate to the actual implementation.
-
 `andReturn` calls to the function will return a specific value.
-
 `andCallFake` all calls to the spy will delegate to the supplied function.
 
+######Creating Mock Spies
+`jasmine.createSpy` creates a “bare” spy. Still tracks calls to it and arguments passed.
+`jasmine.createSpyObj` returns an object that has a property for each string that is a spy.
 
 
 
