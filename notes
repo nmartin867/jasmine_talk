@@ -1,0 +1,29 @@
+Points
+-------
+Suites (describe) - Describes a group of tests
+Specs (it) -  Describes a specific test
+
+Expectations (expect) - takes a value called 'actual'
+
+Matchers (toBe, toEqual, etc.) - boolean compare between the actual and the expected value
+- Custom matchers
+
+Related specs can be grouped by nesting describes
+
+Setup and Teardown (beforeEach & afterEach)
+
+Disablabling Specs and Suites (xdescribe & xit)
+
+Spies - Stub any function track calls to it and all arguments
+ - Special matchers for spies (toHaveBeenCalled, toHaveBeenCalledWith)
+ - (andCallThrough) - Delegate to actual implementation
+ - (andReturn) - All calls to function will return a specific value
+ - (andCallFake) all calls to function will delegate to the supplied function
+ - (createSpy) - create a "bare" spy 
+ - (createSpyObj) - Mock with many speis
+
+ Any - takes a constructor or "class" name as an expected value.
+
+ Mocking the Javascript Clock - makes 'setTimeout' or 'setInterval' callback synchrouous 
+
+ Asynchronous 
