@@ -20,7 +20,7 @@ Spies - Stub any function track calls to it and all arguments
  - (andReturn) - All calls to function will return a specific value
  - (andCallFake) all calls to function will delegate to the supplied function
  - (createSpy) - create a "bare" spy 
- - (createSpyObj) - Mock with many speis
+ - (createSpyObj) - Mock with many spies
 
  Any - takes a constructor or "class" name as an expected value.
 
