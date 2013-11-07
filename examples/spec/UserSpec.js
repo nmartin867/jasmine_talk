@@ -19,7 +19,8 @@ describe("User", function() {
 			expect(user.emails[0] === 'nmartin867@gmail.com').toBe(true);
 		});
 
-		it("should be the same user", function(){
+		//Custom Matchers
+		xit("should be the same user", function(){
 			var newUser = new User('123','mighty_mouse', 'Nick Martin', ['nmartin867@gmail.com']);
 			expect(user).toBeSameUser(newUser);
 		})

@@ -1,4 +1,4 @@
-describe("UserObserver", function(){
+xdescribe("UserObserver", function(){
 	describe("addListener()", function(){
 		it("should throw exception if 'update' is not implemented on user obj", function(){
 			var mockUser = jasmine.createSpy('user');

@@ -1,4 +1,4 @@
-describe("UserService", function(){
+xdescribe("UserService", function(){
 	
 	it("should execute mock callback function on success", function () {
 		var user = new User("123", "MightyMouse", "Nick", ["nmartin@gmail.com"]);
