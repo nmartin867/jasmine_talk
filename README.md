@@ -49,7 +49,7 @@ Jasmine includes most of the matchers you will need. You can create your own, cu
 
 ####Create a custom matcher
 Custom matchers are installed within a suite of tests by adding your matcher function
-as property of `this.addMatchers({})`. This is typically done with a `describe` block.
+as property of `this.addMatchers({})`. This is typically done within the `beforeEach` or `it` block.
 
 
 
