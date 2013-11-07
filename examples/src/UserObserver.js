@@ -14,7 +14,7 @@ var org = (function(ns){
 
 	_public.notify = function(){
 		for(var i = 0; i < listeners.length; ++i){
-			listeners[i].update();
+			listeners[i].update('You have been notified');
 		}
 	};
 

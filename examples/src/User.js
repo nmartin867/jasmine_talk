@@ -39,3 +39,7 @@ function User(id, displayName, name, emails){
                 emails = val;
         });
 };
+
+User.prototype.update = function(){
+        console.log("I'm updating!");
+};
