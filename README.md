@@ -47,9 +47,50 @@ Jasmine includes most of the matchers you will need. You can create your own, cu
 
 `expect(function(){fn();}).toThrow(e);` checks that function throws exception
 
+**Any matcher can evaluate to a negative assertion by simply chaining `not`.**
+
 ####Create a custom matcher
 Custom matchers are installed within a suite of tests by adding your matcher function
-as property of `this.addMatchers({})`. This is typically done with a `describe` block.
+as property of `this.addMatchers({})`. This is typically done within the `beforeEach` or `it` block.
+
+
+>Here is an example of a matcher that will compare the first character of a string:
+
+```js
+    this.addMatchers({
+		toStartWithChar: function(expected) {
+			var actual = this.actual;
+			var notText = this.isNot ? " not" : "";
+			this.message = function () {
+			 return "Expected " + actual + notText + " to be equal to " + expected;
+			}
+	         	return actual.charAt(0) === expected;
+		 }
+	});
+```	
+	
+>You can extend ``jasmine.Matchers.prototype`` to make selectors global.
+    
+####Spies - Mocking
+Spies allow you to stub any function track calls to it and all arguments.
+
+######Spy matchers
+`toHaveBeenCalled()` will return true if the spy was called.
+
+`toHaveBeenCalledWith()` will return true if the argument list matches any of the recorded calls to the spy.
+
+######Spy modifiers
+`andCallThrough()` when chained onto a spy, we can track calls and arguments to a function but, in addition,
+delegate to the actual implementation.
+
+`andReturn` calls to the function will return a specific value.
+
+`andCallFake` all calls to the spy will delegate to the supplied function.
+
+######Creating Mock Spies
+`jasmine.createSpy` creates a “bare” spy. Still tracks calls to it and arguments passed.
+
+`jasmine.createSpyObj` returns an object that has a property for each string that is a spy.
 
 
 
