@@ -2,6 +2,7 @@
 
 
 ####Jasmine lingo
+>User.js
 * `Suits` - Describes a group of tests
 * `Spec`  - Describes a specific test
 * `Expectation` - Describes the expected value as results of a test
@@ -72,6 +73,7 @@ as property of `this.addMatchers({})`. This is typically done within the `before
 >You can extend ``jasmine.Matchers.prototype`` to make selectors global.
     
 ####Spies - Mocking
+>SpySpec.js && UserObserver.js
 Spies allow you to stub any function track calls to it and all arguments.
 
 ######Spy matchers
