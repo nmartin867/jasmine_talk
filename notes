@@ -27,3 +27,11 @@ Spies - Stub any function track calls to it and all arguments
  Mocking the Javascript Clock - makes 'setTimeout' or 'setInterval' callback synchrouous 
 
  Asynchronous 
+
+
+
+ ---------
+
+ Links
+
+ http://a-developer-life.blogspot.com/2011/06/jasmine-part-2-spies-and-mocks.html

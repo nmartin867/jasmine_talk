@@ -3,19 +3,22 @@ var org = (function (ns, $){
 
 	var _public = ns.userService;
 
+
 	_public.saveUser = function(user, callback){
 			$.ajax({
 				type: "POST",
 				url: "/user/",
 				contentType: "application/json; charset=utf-8",
 				dataType: "json",
-				success: callback
+				success: callback,
+				error: callback
 			});
 	}
 
 	_public.getUser = function(id, callback){
 		setTimeout(callback, 3000);
 	}
+
 
 	return ns;
 })(org || {}, jQuery);

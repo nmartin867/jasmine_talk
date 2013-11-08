@@ -1,5 +1,8 @@
 
 describe("User", function() {
+	beforeEach(function(){
+		
+	})
 	describe("constructor", function(){
 		var user = new User('123','mighty_mouse', 'Nick Martin', ['nmartin867@gmail.com']);
 
@@ -24,6 +27,9 @@ describe("User", function() {
 			var newUser = new User('123','mighty_mouse', 'Nick Martin', ['nmartin867@gmail.com']);
 			expect(user).toBeSameUser(newUser);
 		})
+		xit("should NOT begin with char 'N'", function(){
+			expect('Nara').not.toStartWithChar('N');
+		})
 
 	})
 	describe("exceptions", function(){
@@ -32,3 +38,18 @@ describe("User", function() {
 		});
 	})
 });
+
+/*
+this.addMatchers({
+		toStartWithChar: function(expected) {
+			var actual = this.actual;
+			var notText = this.isNot ? " not" : "";
+
+			this.message = function () {
+				return "Expected " + actual + notText + " to be equal to " + expected;
+			}
+
+			return actual.charAt(0) === expected;
+		}
+	});*/
+
