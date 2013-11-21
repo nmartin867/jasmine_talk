@@ -8,14 +8,14 @@
 * `Expectation` - Describes the expected value as results of a test
 	* `Matcher` - a boolean comparison between the actual and expected value
     
-    ```js
+```js
     describe("A suite", function() {
     	it("contains spec with an expectation", function() {
     		expect(true).toBe(true);
     	});
   });
     
-    ```
+```
 `describe()` and `it()` are just functions. So regular JS scoping rules apply. Any varible(s) defined in a `describe`
 block will be available to any `it` function defined within its scope.
 ***
